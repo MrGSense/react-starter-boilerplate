@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-import MessageForm from './MessageForm';
 
 class App extends Component {
     render() {
         return (
             <div className="App">
-                <MessageForm />
+                <h1>My React App</h1>
             </div>
         )
     }
