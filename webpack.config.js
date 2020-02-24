@@ -41,7 +41,7 @@ module.exports = {
       template: "./src/index.html"
     }),
     new WorkboxPlugin.InjectManifest({
-      swSrc: "./src/src-sw.js",
+      swSrc: "./src/serviceWorker.js",
       swDest: "sw.js"
     })
   ],
