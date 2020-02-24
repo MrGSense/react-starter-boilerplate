@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const WorkboxPlugin = require("workbox-webpack-plugin");
 
 module.exports = {
   entry: {
@@ -27,7 +28,7 @@ module.exports = {
         use: ["html-loader"]
       },
       {
-        test: /\.(png|jpe?g|gif)$/i,
+        test: /\.(png|jpe?g|gif|ico)$/i,
         loader: "file-loader",
         options: {
           name: "[path][name].[ext]"
@@ -38,6 +39,10 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/index.html"
+    }),
+    new WorkboxPlugin.InjectManifest({
+      swSrc: "./src/src-sw.js",
+      swDest: "sw.js"
     })
   ],
   devServer: {
