@@ -8,7 +8,7 @@ class App extends Component {
     return (
       <div className='App'>
         <h1>My React App</h1>
-        <img src={img} style={{ width: "200px", height: "200px" }} />
+        <img src={img} alt="Image that says Hello" style={{ width: "200px", height: "200px" }} />
       </div>
     );
   }
