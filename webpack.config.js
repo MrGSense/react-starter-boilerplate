@@ -39,10 +39,6 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/index.html"
-    }),
-    new WorkboxPlugin.InjectManifest({
-      swSrc: "./src/serviceWorker.js",
-      swDest: "sw.js"
     })
   ],
   devServer: {
